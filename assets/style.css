@@ -1,30 +1,83 @@
-/*CSS Reset*/
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
+:root {
+  --text: black;
+  --backgroundColor: #97b0c7;
+  --labelText: rgb(47, 50, 107);
+}
+
+* {
+  color:var(--text);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+  display:flex;
+  flex-direction:row;
+  max-width: 100%;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: var(--backgroundColor);
+}
+
+.subtitle {
+  display:flex;
+
+  justify-content: center;
+  position: relative;
   
-  * {
-    margin: 0;
-  }
   
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
+}
+
+.subtitle img {
+  height: 137px;
   
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  
-  input, button, textarea, select {
-    font: inherit;
-  }
-  
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  
-  #root, #__next {
-    isolation: isolate;
-  }
+}
+
+.subtitle p {
+  position:absolute;
+  bottom: 8px;
+  right: 16px;
+  background-color: var(--backgroundColor);
+}
+
+#aboutMe {
+  display:flex;
+  flex-direction: row;
+}
+
+.label {
+  border-right-color:var(--backgroundColor);
+  border-right-style:solid;
+  border-right-width: 5px;
+}
+.label p {
+  display: flex;
+  color: var(--labelText);
+  text-align:start;
+  font-size: 24px;
+
+}
+#work {
+  display: flex;
+  flex-direction: row;
+}
+.cards {
+  display: flex;
+  display:grid;
+
+}
+
+
+
+
+
+#contactMe {
+  display:flex;
+  flex-direction: row;
+}
+
+.contactInfo {
+  display:inherit;
+  width: 90%;
+  justify-content: space-evenly;
+}
